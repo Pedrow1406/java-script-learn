@@ -1,2 +1,2 @@
 # java-script-learn
- Aprenendo JavaSDcript com o curso do Gustavo Guanabara CeV
+ Aprenendo JavaScript com o curso do Gustavo Guanabara CeV
