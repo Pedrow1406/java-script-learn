@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <link rel="stylesheet" href="style_calc.css">
+</head>
+
+<body>
+    <div class="calc">
+        <h1 class="titulo">Soma de 2 números</h1>
+        <div class="numero">
+            <input type="number" name="n1" id="n1" placeholder="Número 1">
+        </div>
+        <div class="operador">
+            <p id="operar">+</p>
+        </div>
+        <div class="numero">
+            <input type="number" name="n2" id="n2" placeholder="Número 2">
+        </div>
+        <div class="result-field numero">
+            <input type="text" placeholder="Resposta" id="resposta" readonly>
+            <div class="resultado">
+                <button class="igual">
+                    <span>=</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let res = document.querySelector('div.resultado')
+        res.addEventListener('click', resposta)
+        function resposta() {
+            let tn1 = document.querySelector('input#n1');
+            let tn2 = document.querySelector('input#n2');
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let s = n1 + n2
+            resp = document.querySelector('input#resposta').value = s
+
+        }
+    </script>
+</body>
+
+</html>

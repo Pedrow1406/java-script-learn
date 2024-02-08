@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box borda-redonda">
+        <h1 class="titulo">Teste de JavaScript</h1>
+        <p class="descricao">Aprendendo a usar o JavaScript no HTML com a tag script </p>
+    </div>
+    <script>
+        let title = document.querySelector('h1.titulo')
+        let box = document.querySelector('div.box')
+        let orginaltitle = title.innerText
+        c = 0
+
+        box.addEventListener('click', clicar)
+        title.addEventListener('mouseenter', entrar)
+        title.addEventListener('mouseout', sair)
+
+        function clicar() {
+            color = ['black','green', 'red', 'blue', 'pink', 'cyan']
+            let box = document.querySelector('div.box')
+            box.style.color = 'black'
+            box.style.backgroundColor = color[c]
+
+            if (!['pink','cyan','green'].includes(color[c])){
+                box.style.color = 'white'
+            }
+            
+            c++
+            if (c > color.length){
+                box.style.backgroundColor = 'white'
+                box.style.color = 'black'
+                c = 0
+            }
+        } 
+        
+        function entrar(){
+            title.innerText = 'Entrou!'
+        }
+        function sair(){
+            title.innerText = orginaltitle
+        }
+    </script>
+</body>
+
+</html>
